@@ -1,5 +1,5 @@
 ### Micro-Servicio
-###INSTALACION DE TECNOLOGIAS NECESARIAS
+### INSTALACION DE TECNOLOGIAS NECESARIAS
 ###### Es necesario que un su computadora instalen 
 - Node.js 
 - Bun 
@@ -22,7 +22,7 @@ Despues de hacer la migracion es necesario hacer un generate para poder aplicar 
 `Bunx prisma generate`
 ###### Y el utlimo comando basico para la ejecucion del proyecto es:
 `Bun dev`
-#####ESTE COMANDO DEBE SER EJECUTADO EN LA RAIZ DEL PROYECTO PARA PODER EJECUTAR EL BACK Y EL FRONT A LA VEZ
+##### ESTE COMANDO DEBE SER EJECUTADO EN LA RAIZ DEL PROYECTO PARA PODER EJECUTAR EL BACK Y EL FRONT A LA VEZ
 
 ------------
 
