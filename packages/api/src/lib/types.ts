@@ -1,5 +1,5 @@
  import type{
-
+    Example,
 } from '@prisma/client'; 
 
 export type APIResponse<T> = {
@@ -13,4 +13,8 @@ export interface LoginResponseData {
     rol: string;
     id: string;
     username: string;
+}
+
+export type{
+    Example,
 }
