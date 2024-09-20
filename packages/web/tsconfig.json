@@ -17,6 +17,7 @@
     "resolveJsonModule": true,
     "types": [
       "vite/client",
+      "./src/env.d.ts"
     ],
     "allowJs": true,
     "strict": true,
