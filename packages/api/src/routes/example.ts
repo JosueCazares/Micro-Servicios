@@ -1,4 +1,4 @@
-import e, { Router } from 'express';
+import { Router } from 'express';
 import type { Request, Response } from 'express';
 import { prisma } from '../db'
 import type { APIResponse } from '../lib/types';

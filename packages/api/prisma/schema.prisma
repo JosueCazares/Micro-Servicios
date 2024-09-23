@@ -17,3 +17,54 @@ model Example {
   id    Int    @id @default(autoincrement())
   title String
 }
+
+model Usuario {
+  id            Int      @id @default(autoincrement())
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  nombre        String
+  correo        String   @unique
+  contrasena    String
+  estatus       Estatus  @default(ACTIVO) // Puede ser "Activo" o "Inactivo"
+  rol           Rol
+  fechaCreacion DateTime @default(now())
+}
+
+model Area {
+  id       Int        @id @default(autoincrement())
+  nombre   String
+  personal Personal[]
+}
+
+model Personal {
+  id             Int          @id @default(autoincrement())
+  nombre         String
+  correo         String       @unique
+  telefono       String
+  curp           String       @unique
+  numeroEmpleado String       @unique
+  tipoContrato   TipoContrato
+  fechaIngreso   DateTime
+  estatus        Estatus      @default(ACTIVO)
+  areaId         Int
+  area           Area         @relation(fields: [areaId], references: [id])
+}
+
+enum Estatus {
+  ACTIVO
+  INACTIVO
+}
+
+enum Rol {
+  ASPIRANTE
+  ALUMNO
+  SERVICIOS_ESCOLARES
+  PROFESOR
+  RECURSOS_HUMANOS
+  TI
+}
+
+enum TipoContrato {
+  BASE
+  POR_HONORARIOS
+}
