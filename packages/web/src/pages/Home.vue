@@ -18,9 +18,7 @@ onMounted(() => {
         <v-table>
             <thead>
                 <tr>
-                    <th class="text-left">
-                        Id
-                    </th>
+
                     <th class="text-left">
                         Title
                     </th>
@@ -28,7 +26,7 @@ onMounted(() => {
             </thead>
             <tbody>
                 <tr v-for="examples in example">
-                    <td>{{ examples.id }}</td>
+
                     <td>{{ examples.title }}</td>
                 </tr>
             </tbody>
